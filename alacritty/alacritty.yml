@@ -1,9 +1,9 @@
 font:
   size: 11
   offset:
-    y: 11
+    y: 8
   glyph_offset:
-    y: 6
+    y: 5
   normal:
     family: "SFMono Nerd Font"
 window:
@@ -14,7 +14,7 @@ window:
     columns: 120
     lines: 40
   opacity: 0.98
-  decorations: "None"
+  decorations: "none"
 
 cursor:
   unfocused_hollow: true
@@ -428,7 +428,7 @@ colors: *moonfly
 # *solarized-dark
 # *tomorrow-night
 
-colors: *oceanic-next
+colors: *nord
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
