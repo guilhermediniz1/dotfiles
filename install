@@ -2,14 +2,20 @@
 
 DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
-rm -rf $HOME/.config/kitty
-ln -s $DOTFILES/kitty $HOME/.config/kitty
+rm -rf $HOME/.config/sway
+ln -s $DOTFILES/sway $HOME/.config/sway
 
-# rm -rf $HOME/.tmux.conf
-# ln -s $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+rm -rf $HOME/.config/waybar
+ln -s $DOTFILES/waybar $HOME/.config/waybar
+
+rm -rf $HOME/.tmux.conf
+ln -s $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
 rm -rf $HOME/.config/lvim
 ln -s $DOTFILES/nvim $HOME/.config/lvim
+
+rm -rf $HOME/.config/alacritty
+ln -s $DOTFILES/alacritty $HOME/.config/alacritty
