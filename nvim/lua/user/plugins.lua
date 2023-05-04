@@ -119,28 +119,27 @@ use({
   end,
 })
 
-use {
-  "jesseleite/nvim-noirbuddy",
-  requires = { "tjdevries/colorbuddy.nvim", branch = "dev" },
-  config = function()
-    require("noirbuddy").setup({
-      preset = 'minimal',
-    })
-  end;
-}
+-- nvim-tree
+-- disable netrw at the very start of your init.lua (strongly advised)
+-- nvim-tree
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
--- Automatically set up your configuration after cloning packer.nvim
--- Put this at the end after all plugins
-if packer_bootstrap then
-    require('packer').sync()
-end
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
 
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile>
-  augroup end
-]])
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
 
 -- Fuzzy finder
 -- use({
@@ -155,3 +154,16 @@ vim.cmd([[
 --     require('user/plugins/telescope')
 --   end,
 -- })
+
+-- Automatically set up your configuration after cloning packer.nvim
+-- Put this at the end after all plugins
+if packer_bootstrap then
+    require('packer').sync()
+end
+
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile>
+  augroup end
+]])
