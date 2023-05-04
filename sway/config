@@ -40,7 +40,7 @@ output * bg ~/dotfiles/wallpaper.jpg fill
 
 ### Input configuration 
 # Disable monitor (I disabled my monitor because I have two graphics cards. This caused sway to detect two monitors, but I only have one. If this doesn't apply to you, comment out line 49)
-output LVDS-1 disable
+# output LVDS-1 disable
 
 #start dunst
 exec dunst
@@ -177,7 +177,7 @@ input "type:touchpad" {
 # gaps
 default_border pixel 2
 default_floating_border pixel 2
-gaps inner 5
+# gaps inner 5
 
 # Layout stuff:
 #
