@@ -1,13 +1,11 @@
 * {
     border: none;
     font-family: "SFMono Nerd Font", sans-serif;
-    font-size: 13px;
+    font-size: 12px;
   }
   
   window#waybar {
-    /* background-color: rgba(18, 21, 29, 0.98); */
-    background-color: #16161e;
-    /* background-color: rgba(0, 0, 0, 0); */
+    background-color: rgb(18, 21, 29);
     border-bottom: 1px solid #1a1b26;
     color: #abb2bf;
     transition-property: background-color;
@@ -33,12 +31,8 @@
   #battery,
   #network,
   #tray {
-    background-color: #1f1f2d;
     padding: 0 10px;
-    margin: 2px 4px 5px 4px;
-    border: 3px solid rgba(0, 0, 0, 0);
-    border-radius: 90px;
-    background-clip: padding-box;
+    margin: 2px 3px;
   }
   
   #workspaces button {
