@@ -1,4 +1,8 @@
+local P = {}
+-- Setting leader to <space>
 vim.g.mapleader = " "
+
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -48,4 +52,6 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
-
+-- Java Keymaps
+vim.keymap.set("n", "<leader>oi", ":lua require('jdtls').organize_imports()<CR>")
+vim.keymap.set("n", "<leader>jc", ":lua require('jdtls').compile('incremental')<CR>")
