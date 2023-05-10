@@ -174,6 +174,11 @@ _G.packer_plugins = {
     path = "/home/gdiniz/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-css-color"] = {
+    loaded = true,
+    path = "/home/gdiniz/.local/share/nvim/site/pack/packer/start/vim-css-color",
+    url = "https://github.com/ap/vim-css-color"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/gdiniz/.local/share/nvim/site/pack/packer/start/vim-fugitive",

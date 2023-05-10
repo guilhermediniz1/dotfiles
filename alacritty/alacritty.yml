@@ -5,7 +5,7 @@ font:
   glyph_offset:
     y: 0
   normal:
-    family: "SFMono Nerd Font"
+    family: "JetBrains Mono Nerd Font"
 window:
   padding:
     x: 5
@@ -13,7 +13,7 @@ window:
   dimensions:
     columns: 120
     lines: 40
-  opacity: 0.87
+  opacity: 0.9
   decorations: "none"
 
 cursor:
@@ -32,6 +32,36 @@ scrolling:
 ##      START OF COLOR SCHEMES       ##
 #######################################
 schemes:
+  ### Rose Pine ###
+  rose-pine: &rose-pine
+    primary:
+      background: '#191724'
+      foreground: '#e0def4'
+    cursor:
+      text: '#e0def4'
+      cursor: '#eb6f92'
+    selection:
+      text: '#e0def4'
+      background: '#403d52'
+    normal:
+      black: '#26233a'
+      red: '#eb6f92'
+      green: '#31748f'
+      yellow: '#f6c177'
+      blue: '#9ccfd8'
+      magenta: '#c4a7e7'
+      cyan: '#ebbcba'
+      white: '#e0def4'
+    bright:
+      black: '#6e6a86'
+      red: '#eb6f92'
+      green: '#31748f'
+      yellow: '#f6c177'
+      blue: '#9ccfd8'
+      magenta: '#c4a7e7'
+      cyan: '#ebbcba'
+      white: '#e0def4'
+
   ### Doom One ###
   doom-one: &doom-one
     primary:
@@ -411,8 +441,6 @@ schemes:
       magenta: '0xd75f00'
       cyan:    '0x005faf'
       white:   '0x005f87'
-colors: *moonfly
-
 
 ######################################################################
 ## SET THEME: Choose ONE color scheme from those in the above list. ##
@@ -427,8 +455,9 @@ colors: *moonfly
 # *solarized-light
 # *solarized-dark
 # *tomorrow-night
+# *rose-pine
 
-colors: *tomorrow-night
+colors: *rose-pine
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
