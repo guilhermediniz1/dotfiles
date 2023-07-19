@@ -35,7 +35,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>f", "<cmd>silent %!prettier --stdin-filepath %<CR>")
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
@@ -55,3 +55,12 @@ end)
 -- Java Keymaps
 vim.keymap.set("n", "<leader>oi", ":lua require('jdtls').organize_imports()<CR>")
 vim.keymap.set("n", "<leader>jc", ":lua require('jdtls').compile('incremental')<CR>")
+
+-- Kommentary
+vim.api.nvim_set_keymap("n", "gcc", "<Plug>kommentary_line_default", {})
+vim.api.nvim_set_keymap("n", "gc", "<Plug>kommentary_motion_default", {})
+vim.api.nvim_set_keymap("v", "gc", "<Plug>kommentary_visual_default<C-c>", {})
+
+-- Compile and Run C/C++ code
+vim.keymap.set("n", "<leader>r", ":!g++ -Wall % && ./a.out<CR>")
+vim.keymap.set("n", "<leader>rc", ":!gcc -o % && ./a.out<CR>")
