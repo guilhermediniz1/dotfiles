@@ -1,11 +1,11 @@
 font:
-  size: 15
+  size: 14
   offset:
     y: 0
   glyph_offset:
     y: 0
   normal:
-    family: "FiraCode Nerd Font"
+    family: "SourceCode Pro"
 window:
   padding:
     x: 5
