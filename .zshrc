@@ -9,4 +9,4 @@ compinit
 # End of lines added by compinstall
 
 # Aliases
-alias nv="nvim ."
+alias vim="nvim"

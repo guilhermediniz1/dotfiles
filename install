@@ -11,8 +11,11 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 rm -rf $HOME/.config/i3
 ln -s $DOTFILES/i3 $HOME/.config/i3
 
+rm -rf $HOME/.config/i3status
+ln -s $DOTFILES/i3status $HOME/.config/i3status
+
 rm -rf $HOME/.config/alacritty
 ln -s $DOTFILES/alacritty $HOME/.config/alacritty
 
-rm -rf $HOME/.zshrc
-ln -s $DOTFILES/.zshrc $HOME/.zshrc
+# rm -rf $HOME/.zshrc
+# ln -s $DOTFILES/.zshrc $HOME/.zshrc
