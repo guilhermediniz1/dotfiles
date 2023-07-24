@@ -31,6 +31,9 @@ exec --no-startup-id picom
 
 bindsym $mod+F2 exec librewolf
 
+## Turn on click by touch
+exec --no-startup-id xinput set-prop 8 "libinput Tapping Enabled" 1
+
 # -----------
 
 # i3 config file (v4)
@@ -215,9 +218,6 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   status_command i3status
-  position top
   output primary
-  tray_output none
   font pango:SourceCode Pro 10
-  separator_symbol |
 }

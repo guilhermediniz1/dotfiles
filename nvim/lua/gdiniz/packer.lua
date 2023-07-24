@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
   use('b3nj5m1n/kommentary')
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
+  use('prichrd/netrw.nvim')
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
