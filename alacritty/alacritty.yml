@@ -1,11 +1,11 @@
 font:
-  size: 13
+  size: 11
   offset:
     y: 0
   glyph_offset:
     y: 0
   normal:
-    family: "FiraCodeNerdFontMono"
+    family: "JetBrains Mono NerdFont"
 window:
   padding:
     x: 5
@@ -480,7 +480,7 @@ schemes:
 # *rose-pine
 # *hyper
 
-colors: *rose-pine
+colors: *tomorrow-night
 
 #######################################
 ##       END OF COLOR SCHEMES        ##

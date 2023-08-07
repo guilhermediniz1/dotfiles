@@ -32,7 +32,7 @@ exec --no-startup-id picom
 bindsym $mod+F2 exec librewolf
 
 ## Turn on click by touch
-exec --no-startup-id xinput set-prop 8 "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "Synaptics TM3336-001" "libinput Tapping Enabled" 1
 
 # -----------
 

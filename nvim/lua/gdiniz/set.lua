@@ -1,4 +1,4 @@
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -28,7 +28,8 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.clipboard = unnamedplus
+vim.opt.clipboard = clipboard
+
 
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3

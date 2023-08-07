@@ -52,6 +52,10 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+-- Neo-tree Keymaps
+vim.keymap.set("n", "<leader>e", ":Neotree toggle float<CR>")
+vim.keymap.set("v", "<leader>e", ":Neotree toggle float<CR>")
+
 -- Java Keymaps
 vim.keymap.set("n", "<leader>oi", ":lua require('jdtls').organize_imports()<CR>")
 vim.keymap.set("n", "<leader>jc", ":lua require('jdtls').compile('incremental')<CR>")

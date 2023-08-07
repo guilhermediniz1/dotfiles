@@ -60,7 +60,22 @@ return require('packer').startup(function(use)
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
   use('prichrd/netrw.nvim')
-
+  use({
+    "jcdickinson/codeium.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    }
+  })
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
