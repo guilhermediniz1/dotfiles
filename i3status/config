@@ -11,14 +11,14 @@ order += "cpu_temperature 0"
 order += "memory"
 order += "tztime brazil"
 
-wireless wlan0 {
+wireless wlp2s0 {
         format_up = "W: (%quality at %essid, %bitrate)"
         format_down = "W: down"
 }
 
-ethernet eth0 {
+ethernet enp1s0 {
         format_up = "E: %ip (%speed)"
-        format_down = ""
+        format_down = "E: down"
 }
 
 battery 0 {
@@ -34,7 +34,7 @@ battery 0 {
 
 cpu_temperature 0 {
         format = "T: %degrees °C"
-        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input"
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input"
 }
 
 memory {
