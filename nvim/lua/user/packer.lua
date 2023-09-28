@@ -59,7 +59,7 @@ return require('packer').startup(function(use)
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
   use('prichrd/netrw.nvim')
-  use {
+  --[[ use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     requires = {
@@ -67,14 +67,15 @@ return require('packer').startup(function(use)
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     }
-  }
+  } ]]
   use({
     'lewis6991/gitsigns.nvim',
     config = function()
       require('gitsigns').setup({
         signs = {
-          add = { text = '⢕' },
-          change = { text = '⢕' },
+          add = { text = '+' },
+          change = { text = '~' },
+          delete = { text = '-' },
         },
       })
       vim.keymap.set('n', ']h', ':Gitsigns next_hunk<CR>')
@@ -94,7 +95,6 @@ return require('packer').startup(function(use)
   })
 
   use('ThePrimeagen/vim-be-good')
-  use('ellisonleao/gruvbox.nvim')
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
