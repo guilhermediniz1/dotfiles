@@ -68,7 +68,7 @@ return require('packer').startup(function(use)
       "MunifTanjim/nui.nvim",
     }
   } ]]
-  use({
+  --[[ use({
     'lewis6991/gitsigns.nvim',
     config = function()
       require('gitsigns').setup({
@@ -85,7 +85,7 @@ return require('packer').startup(function(use)
       vim.keymap.set('n', 'gp', ':Gitsigns preview_hunk<CR>')
       vim.keymap.set('n', 'gb', ':Gitsigns blame_line<CR>')
     end,
-  })
+  }) ]]
 
   use({
     'windwp/nvim-autopairs',
@@ -95,9 +95,14 @@ return require('packer').startup(function(use)
   })
 
   use('ThePrimeagen/vim-be-good')
+  use('tpope/vim-dadbod')
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
+  -- Debug Adapter
+  use('mfussenegger/nvim-dap')
+  use('rcarriga/nvim-dap-ui')
+  use('theHamsta/nvim-dap-virtual-text')  
+  use('andrewferrier/debugprint.nvim')
+
   if packer_bootstrap then
     require('packer').sync()
   end
