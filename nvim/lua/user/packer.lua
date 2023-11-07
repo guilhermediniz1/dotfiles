@@ -53,7 +53,7 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
-  -- use('mfussenegger/nvim-jdtls')
+  use('mfussenegger/nvim-jdtls')
   use('norcalli/nvim-colorizer.lua')
   use('b3nj5m1n/kommentary')
   use('jose-elias-alvarez/null-ls.nvim')
