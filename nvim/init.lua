@@ -1,1 +1,2 @@
-require("user")
+require("guilherme.core")
+require("guilherme.lazy")

@@ -1,4 +1,7 @@
-local null_ls = require("null-ls")
+return {
+  'jose-elias-alvarez/null-ls.nvim',
+  config = function()
+	local null_ls = require("null-ls")
 
 local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false })
 local event = "BufWritePre" -- or "BufWritePost"
@@ -30,3 +33,5 @@ null_ls.setup({
     end
   end,
 })
+  end
+}
