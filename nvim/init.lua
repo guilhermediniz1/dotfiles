@@ -39,6 +39,9 @@ vim.opt.cursorline = true
 
 vim.opt.scrolloff = 10
 
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
+
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
@@ -100,7 +103,7 @@ require('lazy').setup {
         ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
         ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-        ['<leader>f'] = { name = '[F]earch', _ = 'which_key_ignore' },
+        ['<leader>f'] = { name = '[F]ind', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
       }
     end,
@@ -365,13 +368,14 @@ require('lazy').setup {
   },
 
   {
-    'folke/tokyonight.nvim',
+    'lunarvim/horizon.nvim',
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
+    opts = {
+      transparent = true,
+    },
     config = function()
-      vim.cmd.colorscheme 'tokyonight-night'
-
-      vim.cmd.hi 'Comment gui=none'
+      vim.cmd 'colorscheme horizon'
     end,
   },
 

@@ -6,7 +6,7 @@ general {
 order += "disk /"
 order += "wireless wlan0"
 order += "ethernet eth0"
-// order += "battery 0"
+order += "battery 0"
 order += "cpu_temperature 0"
 order += "memory"
 order += "tztime brazil"
@@ -30,11 +30,12 @@ battery 0 {
         status_full = "☻ FULL"
         path = "/sys/class/power_supply/BAT0/uevent"
         low_threshold = 10
+	last_full_capacity = true
 }
 
 cpu_temperature 0 {
         format = "T: %degrees °C"
-        path = ""
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input"
 }
 
 memory {

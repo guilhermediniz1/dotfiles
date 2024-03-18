@@ -20,7 +20,7 @@ bindsym $mod+x exec "redshift -x"
 exec --no-startup-id nitrogen --restore
 
 ## Window gaps
-gaps inner 4
+# gaps inner 4
 
 ## Remove Window title
 default_border pixel 1
@@ -29,7 +29,7 @@ default_floating_border pixel 1
 ## Picom - Image compositor
 exec --no-startup-id picom
 
-bindsym $mod+F2 exec brave-browser
+bindsym $mod+F2 exec thorium-browser
 
 # ## Turn on click by touch
 # exec --no-startup-id xinput set-prop "Synaptics TM3336-001" "libinput Tapping Enabled" 1
@@ -213,5 +213,12 @@ bar {
   position top
   status_command i3status
   output HDMI-A-0
+  font pango:JetBrains Mono NL 10
+}
+
+bar {
+  position top
+  status_command i3status
+  output eDp-1
   font pango:JetBrains Mono NL 10
 }
