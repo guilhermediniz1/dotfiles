@@ -1,6 +1,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.g.have_nerd_font = true
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
@@ -77,7 +79,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup {
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',    opts = {} },
 
   {
     'lewis6991/gitsigns.nvim',
@@ -275,7 +277,11 @@ require('lazy').setup {
 
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'stylua', -- Used to format lua code
+        'marksman',
+        'tailwindcss-language-server',
+        'vue-language-server',
+        'typescript-language-server',
+        'lua-language-server'
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -368,15 +374,12 @@ require('lazy').setup {
   },
 
   {
-    'lunarvim/horizon.nvim',
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
-    opts = {
-      transparent = true,
-    },
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
     config = function()
-      vim.cmd 'colorscheme horizon'
-    end,
+      vim.cmd 'colorscheme catppuccin-latte'
+    end
   },
 
   { 'folke/todo-comments.nvim', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
