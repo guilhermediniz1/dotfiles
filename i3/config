@@ -83,11 +83,12 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 # tiling_drag modifier titlebar
 
-bindsym $mod+Return exec wezterm
+bindsym $mod+Return exec alacritty
 
 bindsym $mod+q kill
 
-bindsym $mod+d exec --no-startup-id rofi -show drun
+# bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec i3-dmenu-desktop
 
 bindsym $mod+j focus left
 bindsym $mod+k focus down
