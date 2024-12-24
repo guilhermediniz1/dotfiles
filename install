@@ -11,8 +11,17 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 rm -rf $HOME/.config/alacritty
 ln -s $DOTFILES/alacritty $HOME/.config/alacritty
 
+rm -rf $HOME/.config/kitty
+ln -s $DOTFILES/kitty $HOME/.config/kitty
+
+rm -rf $HOME/.config/zathura
+ln -s $DOTFILES/zathura $HOME/.config/zathura
+
 rm -rf $HOME/.config/i3
 ln -s $DOTFILES/i3 $HOME/.config/i3
+
+rm -rf $HOME/.config/hypr
+ln -s $DOTFILES/hypr $HOME/.config/hypr
 
 rm -rf $HOME/.config/i3status
 ln -s $DOTFILES/i3status $HOME/.config/i3status
