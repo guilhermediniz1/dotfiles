@@ -8,7 +8,10 @@
 # Custom Configs
 
 ## Print with Flameshot
-bindsym Print exec "flameshot gui"
+
+set $mod Mod4
+
+bindsym $mod+p exec "flameshot gui"
 
 ## Set night temp
 bindsym $mod+n exec "redshift -O 4500"
@@ -16,11 +19,15 @@ bindsym $mod+n exec "redshift -O 4500"
 ## Remove night temp
 bindsym $mod+x exec "redshift -x"
 
+exec --no-startup-id xrandr --output HDMI-1-0 --mode 3840x2160 --pos 0x0 --rate 60 --output eDP-1 --mode 1920x1080 --pos 3840x0 --primary
+
 ## Keep the wallpaper
-exec --no-startup-id nitrogen --restore
+# exec --no-startup-id nitrogen --restore
+exec --no-startup-id feh --randomize --bg-fill /home/g/Wallpapers/
+bindsym $mod+Shift+b exec --no-startup-id feh ~/Wallpapers/ --randomize --bg-fill
 
 ## Window gaps
-# gaps inner 4
+gaps inner 8
 
 ## Remove Window title
 default_border pixel 1
@@ -36,13 +43,15 @@ bindsym $mod+F2 exec thorium-browser
 
 exec --no-startup-id setxkbmap -model pc105 -layout us -variant intl
 
+# Display screens config
+
+exec --no-startup-id xrandr --output HDMI-1-2 --mode 3840x2160 --right-of eDP-1 --output eDP-1 --mode 1920x1080 --primary
+
 # -----------
 
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
-set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -83,12 +92,12 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 # tiling_drag modifier titlebar
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 bindsym $mod+q kill
 
-# bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec i3-dmenu-desktop
+bindsym $mod+d exec dmenu_run
+bindsym $mod+Shift+d exec i3-dmenu-desktop
 
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -221,5 +230,12 @@ bar {
   position top
   status_command i3status
   output eDp-1
+  font pango:JetBrains Mono NL 10
+}
+
+bar {
+  position top
+  status_command i3status
+  output HDMI-1-0
   font pango:JetBrains Mono NL 10
 }
