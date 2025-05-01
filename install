@@ -14,11 +14,24 @@ ln -s $DOTFILES/zathura $HOME/.config/zathura
 rm -rf $HOME/.config/kitty
 ln -s $DOTFILES/kitty $HOME/.config/kitty
 
+# DWM related
+
+rm -rf $HOME/.local/share/suckless/dmenu
+ln -s $DOTFILES/suckless/dmenu $HOME/.local/share/suckless/dmenu
+
+rm -rf $HOME/.local/share/suckless/dwm
+ln -s $DOTFILES/suckless/dwm $HOME/.local/share/suckless/dwm
+
+rm -rf $HOME/.local/share/suckless/dwmblocks
+ln -s $DOTFILES/suckless/dwmblocks $HOME/.local/share/suckless/dwmblocks
+
+rm -rf $HOME/.local/share/suckless/st
+ln -s $DOTFILES/suckless/st $HOME/.local/share/suckless/st
+
+# ---- 
+
 # rm -rf $HOME/.config/i3
 # ln -s $DOTFILES/i3 $HOME/.config/i3
-#
-# rm -rf $HOME/.config/hypr
-# ln -s $DOTFILES/hypr $HOME/.config/hypr
 
 # rm -rf $HOME/.config/i3status
 # ln -s $DOTFILES/i3status $HOME/.config/i3status
