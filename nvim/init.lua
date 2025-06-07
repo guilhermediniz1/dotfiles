@@ -3,6 +3,9 @@ vim.g.maplocalleader = ' '
 
 vim.g.have_nerd_font = true
 
+vim.cmd("filetype plugin indent on")
+vim.cmd("syntax enable")
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
@@ -295,7 +298,7 @@ require('lazy').setup {
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        javascript = { { 'prettierd', 'prettier' } },
+        javascript = { 'prettierd', 'prettier' },
       },
     },
   },
@@ -473,5 +476,12 @@ require('lazy').setup {
       --   ignore_install = { 'org' },
       -- })
     end,
+  },
+  {
+    "lervag/vimtex",
+    lazy = false,
+    init = function()
+      vim.g.vimtex_view_method = "zathura"
+    end
   }
 }
